@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Script by Hanno Boeck, http://hboeck.de
+# License: CC0 / Public Domain
+#
+# Usage: tmobile user=[username] pass=[pass]
+# or adjust variables in script and call without parameters
+
+user=
+pass=
+
+wget -O /dev/null https://hotspot.t-mobile.net/wlan/index.do \
+	--post-data="username=$user&password=$pass&strAGB=AGB&strHinweis=Zahlungsbedingungen"
